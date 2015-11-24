@@ -1,0 +1,30 @@
+{
+  "name": "react-native-rebound-scrollview",
+  "version": "0.0.1",
+  "description": "React Native Android ReboundScrollView implementation.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaxchow/react-native-rebound-scrollview.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "scrollview",
+    "android",
+    "react",
+    "rebound"
+  ],
+  "author": "jaxchow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaxchow/react-native-rebound-scrollview/issues"
+  },
+  "homepage": "https://github.com/jaxchow/react-native-rebound-scrollview#readme",
+  "peerDependencies": {
+    "react-native": ">=0.12.0"
+  }
+}
