@@ -1,5 +1,5 @@
 # React Native ReboundScroolView
-A pull-to-refresh ListView which shows a loading spinner while your data reloads
+support android rebound ScrollView, compatible ios -- use react scrollview
 
 
 ![screen](./screen.gif)
