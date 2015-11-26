@@ -1,4 +1,4 @@
-# React Native ReboundScroolView
+# React Native ReboundScrollView
 support android rebound ScrollView, compatible ios -- use react scrollview
 
 
@@ -13,11 +13,7 @@ support android rebound ScrollView, compatible ios -- use react scrollview
 ```js
 var ArticleDetailView = React.createClass({
 	render:function(){
-		/*
-		HSNetUtils.getDynamicList('getDynamicList',{"aa":11},function(result){
-            console.log(result);
-        })
-		*/
+		
 		return(
 		<ReboundScrollView>
 			<View style={ArticleDetailStyle.container}>
