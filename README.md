@@ -7,6 +7,63 @@ support android rebound ScrollView, compatible ios -- use react scrollview
 
 
 ## Usage
+##Android
+
+In android/setting.gradle
+
+```
+...
+
+include ':app',':ReboundScrollView'
+project(':ReboundScrollView').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-rebound-scrollview/android/app')
+
+```
+In android/app/build.gradle
+
+```
+...
+dependencies {
+    ...
+    compile project(':ReboundScrollView')
+}
+```
+Register module (in MainActivity.java)
+
+```
+import com.jg.zhang.scrollview.ReboundScrollViewPackage; // <------ add here
+
+
+public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
+  ......
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    mReactRootView = new ReactRootView(this);
+
+    mReactInstanceManager = ReactInstanceManager.builder()
+      .setApplication(getApplication())
+      .setBundleAssetName("index.android.bundle")
+      .setJSMainModuleName("index.android")
+      .addPackage(new MainReactPackage())
+      .addPackage(new ReboundScrollViewPackage(this))       // <------ add here
+      .setUseDeveloperSupport(BuildConfig.DEBUG)
+      .setInitialLifecycleState(LifecycleState.RESUMED)
+      .build();
+
+    mReactRootView.startReactApplication(mReactInstanceManager, "ExampleRN", null);
+
+    setContentView(mReactRootView);
+  }
+
+  ......
+
+}
+```
+
+
+
+> 基本功能已现实，还存在BUG，后续完善
 
 ### Example
 
